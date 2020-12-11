@@ -1,0 +1,60 @@
+package com.example.iot_firebase.model;
+
+public class UserModel {
+    private String userName;
+    private String password;
+    private String userFullName;
+    private String userId;
+    private int homeId;
+
+    public UserModel() {
+    }
+
+    public UserModel(String userName, String password, String userFullName, String userId, int homeId) {
+        this.userName = userName;
+        this.password = password;
+        this.userFullName = userFullName;
+        this.userId = userId;
+        this.homeId = homeId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserFullName() {
+        return userFullName;
+    }
+
+    public void setUserFullName(String userFullName) {
+        this.userFullName = userFullName;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public int getHomeId() {
+        return homeId;
+    }
+
+    public void setHomeId(int homeId) {
+        this.homeId = homeId;
+    }
+}
