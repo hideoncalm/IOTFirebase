@@ -3,10 +3,10 @@ package com.example.iot_firebase.controller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private List<UserModel> userList;
     public static final String USER_ID_LOGIN = "USER_ID";
     public static final String HOME_ID_LOGIN = "HOME_ID";
+    private TextView goToHomeRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(signUpActivity);
             }
         });
+        goToHomeRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeRegisterActivity = new Intent(LoginActivity.this, HomeRegisterActivity.class);
+                startActivity(homeRegisterActivity);
+            }
+        });
     }
 
 
@@ -59,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnLoginSignUp);
         editTextUserName = findViewById(R.id.editTextLoginUserName);
         editTextPassword = findViewById(R.id.editTextLoginPassword);
+        goToHomeRegister = findViewById(R.id.text_home_register);
         userList = new ArrayList<>();
     }
 
@@ -88,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();
                         Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
                         mainIntent.putExtra(USER_ID_LOGIN, user.getUserId());
-                        mainIntent.putExtra(HOME_ID_LOGIN, Integer.toString(user.getHomeId()));
+                        mainIntent.putExtra(HOME_ID_LOGIN, user.getHomeId());
                         startActivity(mainIntent);
                         finish();
                     }

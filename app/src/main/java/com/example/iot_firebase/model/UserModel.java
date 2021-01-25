@@ -5,12 +5,12 @@ public class UserModel {
     private String password;
     private String userFullName;
     private String userId;
-    private int homeId;
+    private String homeId;
 
     public UserModel() {
     }
 
-    public UserModel(String userName, String password, String userFullName, String userId, int homeId) {
+    public UserModel(String userName, String password, String userFullName, String userId, String homeId) {
         this.userName = userName;
         this.password = password;
         this.userFullName = userFullName;
@@ -50,11 +50,11 @@ public class UserModel {
         this.userId = userId;
     }
 
-    public int getHomeId() {
+    public String getHomeId() {
         return homeId;
     }
 
-    public void setHomeId(int homeId) {
+    public void setHomeId(String homeId) {
         this.homeId = homeId;
     }
 }

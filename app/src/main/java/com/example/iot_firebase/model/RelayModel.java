@@ -1,12 +1,12 @@
 package com.example.iot_firebase.model;
 
 public class RelayModel {
-    private int homeId;
+    private String homeId;
     private String relayId;
     private String relayName;
     private int status;
     public RelayModel(){ }
-    public RelayModel(int homeId, String relayId, String relayName, int status) {
+    public RelayModel(String homeId, String relayId, String relayName, int status) {
         this.homeId = homeId;
         this.relayId = relayId;
         this.relayName = relayName;
@@ -21,11 +21,11 @@ public class RelayModel {
         this.relayId = relayId;
     }
 
-    public int getHomeId() {
+    public String getHomeId() {
         return homeId;
     }
 
-    public void setHomeId(int homeId) {
+    public void setHomeId(String homeId) {
         this.homeId = homeId;
     }
 

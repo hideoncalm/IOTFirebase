@@ -41,7 +41,7 @@ public class SignUpActivity_2 extends AppCompatActivity {
     private List<RelayModel> listRelayModel, listRelayChoose;
     private DatabaseReference homeReference;
     private String userFulName, userName, password;
-    private int homeId;
+    private String homeId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

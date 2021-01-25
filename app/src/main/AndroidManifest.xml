@@ -13,6 +13,8 @@
         </activity>
         <activity android:name=".controller.SignUpActivity_1">
         </activity>
+        <activity android:name=".controller.HomeRegisterActivity">
+        </activity>
         <activity android:name=".controller.SignUpActivity_2">
         </activity>
         <activity android:name=".controller.LoginActivity">

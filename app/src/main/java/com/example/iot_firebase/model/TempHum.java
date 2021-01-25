@@ -1,34 +1,34 @@
 package com.example.iot_firebase.model;
 
 public class TempHum {
-    private int homeId;
+    private String homeId;
     private int humidity;
-    private int tempHumId;
+    private String tempHumId;
     private int temperature;
 
     public TempHum() {
     }
 
-    public TempHum(int homeId, int humidity, int tempHumId, int temperature) {
+    public TempHum(String homeId, int humidity, String tempHumId, int temperature) {
         this.homeId = homeId;
         this.humidity = humidity;
         this.tempHumId = tempHumId;
         this.temperature = temperature;
     }
 
-    public int getTempHumId() {
+    public String getTempHumId() {
         return tempHumId;
     }
 
-    public void setTempHumId(int tempHumId) {
+    public void setTempHumId(String tempHumId) {
         this.tempHumId = tempHumId;
     }
 
-    public int getHomeId() {
+    public String getHomeId() {
         return homeId;
     }
 
-    public void setHomeId(int homeId) {
+    public void setHomeId(String homeId) {
         this.homeId = homeId;
     }
 

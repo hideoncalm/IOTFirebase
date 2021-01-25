@@ -3,6 +3,7 @@ package com.example.iot_firebase.controller;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateTempAndHum() {
-        DatabaseReference temReference = FirebaseDatabase.getInstance().getReference("tempHum").child(String.valueOf(homeId));
+        DatabaseReference temReference = FirebaseDatabase.getInstance().getReference("tempHum").child(homeId);
         ArrayList<Entry> yTemp, yHum;
         yTemp = new ArrayList<>();
         yHum = new ArrayList<>();
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 TempHum tH = snapshot.getValue(TempHum.class);
+                Log.d("tag", tH.toString());
                 int temperature, humidity;
                 temperature = tH.getTemperature();
                 humidity = tH.getHumidity();
