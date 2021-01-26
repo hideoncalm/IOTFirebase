@@ -1,4 +1,4 @@
-package com.example.iot_firebase.controller;
+    package com.example.iot_firebase.controller;
 
 import android.content.Intent;
 import android.os.Bundle;

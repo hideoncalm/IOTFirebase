@@ -78,7 +78,6 @@ public class HomeRegisterActivity extends AppCompatActivity {
         for (RelayModel relayModel : relayList){
             String relayId = reference.push().getKey();
             relayModel.setRelayId(relayId);
-            relayModel.setRelayName(deviceName.getText().toString());
             relayModel.setHomeId(homeId);
             relayModel.setStatus(0);
             reference.child(relayId).setValue(relayModel);
